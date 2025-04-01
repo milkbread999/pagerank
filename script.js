@@ -76,11 +76,20 @@ class Webpage {
     const totalPages = Object.keys(pages).length;
     const initialPR = (1 / totalPages).toFixed(3);
   
+    // Create and append the new page's visual representation
     const div = document.createElement("div");
     div.className = "page";
     div.id = `page-${name}`;
     div.innerHTML = `<h3>${name}</h3><small>PR: ${initialPR}</small>`;
     document.getElementById("mindmap").appendChild(div);
+  
+    // Update all existing pages' displayed initial PR
+    for (let existingName in pages) {
+      const existingDiv = document.getElementById(`page-${existingName}`);
+      if (existingDiv) {
+        existingDiv.querySelector("small").textContent = `PR: ${(1 / totalPages).toFixed(3)}`;
+      }
+    }
   
     document.getElementById("pageName").value = '';
   }
