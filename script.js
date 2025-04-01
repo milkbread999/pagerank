@@ -73,10 +73,13 @@ class Webpage {
     const page = new Webpage(name);
     pages[name] = page;
   
+    const totalPages = Object.keys(pages).length;
+    const initialPR = (1 / totalPages).toFixed(3);
+  
     const div = document.createElement("div");
     div.className = "page";
     div.id = `page-${name}`;
-    div.innerHTML = `<h3>${name}</h3><small>PR: 1.0</small>`;
+    div.innerHTML = `<h3>${name}</h3><small>PR: ${initialPR}</small>`;
     document.getElementById("mindmap").appendChild(div);
   
     document.getElementById("pageName").value = '';
