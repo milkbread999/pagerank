@@ -1,0 +1,52 @@
+body {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  #controls {
+    margin-bottom: 20px;
+  }
+  
+  #mindmap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  button{
+    background: lightpink;
+    border-radius: 15%;
+  }
+  
+  div{
+    padding:10px;
+  }
+  .run{
+    background:lightcyan;
+  }
+
+  .pagebtn{
+    background:rgb(246, 255, 178);
+  }
+
+  .page {
+    width: 120px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    background: #f0f0f0;
+  }
+  
+  .page h3 {
+    margin: 0;
+  }
+  
+  .page small {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+  }
+  

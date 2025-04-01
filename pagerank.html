@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pagerank visualization</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>pagerank visualization</h1>
+  <div id="controls">
+    <div class="row" id="addPage">
+      <input type="text" id="pageName" placeholder="page name">
+      <button class="pagebtn" onclick="addPage()">add page</button>
+     </div>
+
+     <div class="row" id="addLink">
+    <input type="text" id="fromPage" placeholder="from">
+    <input type="text" id="toPage" placeholder="to">
+    <button onclick="addLink()">add link</button>
+     </div>
+     <div class="row">
+    <button class="run" onclick="runPageRank()">run pagerank</button>
+  </div>
+  </div>
+  <div id="mindmap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
